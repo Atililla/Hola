@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario atributos type text</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* .ejemplo {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h3>ATRIBUTOS PARA LOS INPUT DE TIPO TEXTO</h3>
+    <div>
+        <form>
+            <!-- 
+            PLACEHOLDER
+            texto que se muestra en el campo de texto antes de que el usuario escriba 
+             -->
+            <h4>PLACEHOLDER</h4>
+            <p>texto que se muestra en el campo de texto antes de que el usuario escriba</p>
+            <label>placeholder</label>
+            <input type="text" placeholder="placeholder"><br>
+            <hr>
+            <!-- 
+            VALUE
+            valor que se muestra en el campo de texto 
+            -->
+            <h4>VALUE</h4>
+            <p>valor que se muestra en el campo de texto</p>
+            <label>value</label>
+            <input type="text" value="value"><br>
+            <hr>
+            <!-- 
+            SIZE
+            tamaño del campo de texto
+            -->
+            <h4>SIZE</h4>
+            <p>tamaño del campo de texto</p>
+            <label>size</label>
+            <input type="text" size="50"><br>
+            <hr>
+            <!-- 
+            AUTOFOCUS
+            el campo de texto se selecciona automaticamente al cargar la pagina
+            -->
+            <h4>AUTOFOCUS</h4>
+            <p>el campo de texto se selecciona automaticamente al cargar la pagina</p>
+            <label>autofocus</label>
+            <input type="text" autofocus><br>
+            <hr>
+            <!--
+            REQUIRED
+            el campo de texto es obligatorio
+            -->
+            <h4>REQUIRED</h4>
+            <p>el campo de texto es obligatorio</p>
+            <label>required</label>
+            <input type="text" required><br>
+            <hr>
+            <!-- 
+            DISABLED
+            deshabilita el campo de texto
+            -->
+            <h4>DISABLED</h4>
+            <p>deshabilita el campo de texto</p>
+            <label>disabled</label>
+            <input type="text" disabled><br>
+            <hr>
+            <!-- 
+            READONLY
+            el campo de texto no se puede editar
+            -->
+            <h4>READONLY</h4>
+            <p>el campo de texto no se puede editar</p>
+            <label>readonly</label>
+            <input type="text" readonly value="readonly no se escribe"><br>
+            <hr>
+            <!--
+            MAXLENGTH MINLENGTH
+            longitud maxima y minima del campo de texto
+            -->
+            <h4>MAXLENGTH MINLENGTH</h4>
+            <p>longitud maxima y minima del campo de texto</p>
+            <label>maxlength minlength</label>
+            <input type="text" maxlength="5" minlength="2"><br>
+            <hr>
+            <!--
+            PATTERN
+            patron que debe cumplir el campo de texto
+            -->
+            <h4>PATTERN</h4>
+            <p>patron que debe cumplir el campo de texto</p>
+            <label>pattern</label>
+            <input type="text" pattern="[0-9]" title="solo numeros"><br>
+            <hr>
+            <!-- boton enviar -->
+            <input type="submit" value="boton enviar">
+        </form>
+    </div>
+</body>
+
+</html>

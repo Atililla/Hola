@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla 8x8</title>
+    <link rel="icon" href="fotos/favicon.png">
+    <style>
+        /* Estilo general para el body, centrar el contenido (encabezado y tabla) */
+        body {
+            display: flex;
+            flex-direction: column; /* Alinea los elementos en columna (encabezado y tabla) */
+            justify-content: center;  /* Centra horizontalmente */
+            align-items: center;      /* Centra verticalmente */
+            height: 100vh;            /* Hace que el body tenga la altura completa de la ventana */
+            margin: 0;                /* Elimina el margen predeterminado */
+            
+        }
+
+        /* Estilos para el encabezado */
+        h1, h2 {
+            text-align: center; /* Centra el texto de los encabezados */
+            font-family: 'Arial', sans-serif; /* Usa la fuente Arial */
+            margin: 0;  /* Elimina márgenes alrededor de los encabezados */
+        }
+
+        h1 {
+            font-size: 36px;  /* Tamaño grande para el primer encabezado  */
+            color: darkgreen; /* Color verde oscuro para el h1 */
+        }
+
+        h2 {
+            font-size: 24px;  /* Tamaño un poco menor para el segundo encabezado (Ejercicio número 3) */
+            color: #555;      /* Color gris oscuro para el h2 */
+            margin-top: 10px; /* Añade espacio arriba del h2 para separarlo del h1 */
+        }
+
+        /* Estilos para la tabla */
+        table {
+            border-collapse: separate; /* Necesario para aplicar borde doble entre celdas */
+            border-spacing: 0; /* Elimina el espacio entre las celdas */
+            border: 5px solid darkgreen; /* Borde exterior de la tabla de 5px en color verde oscuro */
+            width: 800px; /* Ancho de la tabla: 8 celdas x 100px */
+            height: 800px; /* Alto de la tabla: 8 celdas x 100px */
+            background-color: white; /* Fondo claro para la tabla */
+        }
+
+        /* Estilo para las celdas de la tabla */
+        td {
+            width: 100px; /* Ancho de cada celda */
+            height: 100px; /* Alto de cada celda */
+            border: 3px double rgb(163, 13, 177); /* Borde interior doble de 3px de color rosa */
+            text-align: center; /* Centra el texto horizontalmente */
+            vertical-align: middle; /* Centra el texto verticalmente */
+            padding: 0; /* Elimina el padding de las celdas */
+        }
+
+        /* Estilos para las imágenes dentro de las celdas */
+        .dragon {
+            width: 95%;
+            height: 200%;
+            object-fit: cover; /* Asegura que la imagen cubra el espacio de la celda sin distorsionar */
+        }
+
+        .sol {
+            width: 100%; /* Ajusta el tamaño para que la imagen no llene toda la celda */
+            height: 300%;
+            object-fit: contain; /* Mantiene la imagen dentro de la celda sin recortarla */
+        }
+
+        .libro {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra la celda sin distorsionar */
+        }
+
+        .yin {
+            width: 100%;
+            height: 200%;
+            object-fit: cover; /* Asegura que la imagen cubra la celda sin distorsionar */
+        }
+
+        .espacio {
+            width: 100%;
+            height: 200%;
+            object-fit: cover; /* Asegura que la imagen cubra la celda sin distorsionar */
+        }
+
+             /* Estilo para el botón de volver */
+        .boton-volver {
+            position: absolute;
+            top: 10px; /* Lo coloca cerca de la parte superior */
+            right: 10px; /* Lo alinea a la derecha */
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color del texto */
+            padding: 15px 32px; /* Espaciado del botón */
+            font-size: 16px; /* Tamaño de la fuente */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Puntero al pasar sobre el botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .boton-volver:hover {
+            background-color: #45a049; /* Cambio de color al pasar el mouse */
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Tabla 8x8 -->
+    <table>
+        <!-- Fila 1 -->
+        <tr>
+            <td rowspan="2"><img src="fotos/Dragon4.png" class="dragon"></td> <!-- Imagen del dragón que ocupa dos filas -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td colspan="3" rowspan="3"><img src="fotos/Sol5.jpg" class="sol"></td> <!-- Imagen del sol que ocupa 3 celdas y 3 filas -->
+        </tr>
+
+        <!-- Fila 2 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td colspan="2"><img src="fotos/Libro1.png" class="libro"></td> <!-- Imagen del libro que ocupa dos columnas -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+
+        <!-- Fila 3 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+        
+        <!-- Fila 4 -->
+        <tr>
+            <td colspan="2" rowspan="2"><img src="fotos/Yin1.png" class="yin"></td> <!-- Imagen del Yin que ocupa 2 columnas y 2 filas -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+        
+        <!-- Fila 5 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+        
+        <!-- Fila 6 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td colspan="3" rowspan="2"><img src="fotos/Espacio1.jpg" class="espacio"></td> <!-- Imagen del espacio que ocupa 3 columnas y 2 filas -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+
+        <!-- Fila 7 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+        
+        <!-- Fila 8 -->
+        <tr>
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+            <td></td> <!-- Celda vacía -->
+        </tr>
+    </table>
+
+     <!-- Botón para volver a la página principal -->
+     <a href="FinalMF0964.html" class="boton-volver">Volver a la Página Principal</a>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piolín y Silvestre con Fondo</title>
+    <link rel="icon" href="fotos/favicon.png">
+    <style>
+        /* Establecer el fondo que se muestra inicialmente */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Para evitar barras de desplazamiento */
+            background-color: white; /* Color de fondo */
+        }
+
+        /* Fondo inicial que se mostrará durante 5 segundos */
+        .fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('fotos/Fondo.png') no-repeat center center;
+            background-size: cover;
+            animation: fondoDesaparecer 3s forwards; /* Desaparece después de 3 segundos */
+        }
+
+        /* Animación para hacer desaparecer el fondo */
+        @keyframes fondoDesaparecer {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Imagen de Piolín temblando */
+        .piolin {
+            position: absolute;
+            top: 80%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            width: 275px;
+            opacity: 0; /* Inicialmente invisible */
+            animation: temblar 0.2s infinite, aparecer 1s forwards; /* Efecto de temblar y aparecer */
+            animation-delay: 1s; /* Aparece inmediatamente después de que desaparezca el fondo */
+        }
+
+        /* Animación para simular que Piolín tiembla */
+        @keyframes temblar {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            25% { transform: translate(-50%, -50%) rotate(2deg); }
+            50% { transform: translate(-50%, -50%) rotate(-2deg); }
+            75% { transform: translate(-50%, -50%) rotate(2deg); }
+            100% { transform: translate(-50%, -50%) rotate(-2deg); }
+        }
+
+        /* Animación para hacer que Piolín aparezca después del fondo */
+        @keyframes aparecer {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Imagen de Silvestre que se agranda */
+        .silvestre {
+            position: absolute;
+            top: 40%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            opacity: 0; /* Inicialmente invisible */
+            animation: agrandar 1s infinite, aparecer 1s forwards; /* Efecto de agrandarse y aparecer */
+            animation-delay: 1s; /* Aparece inmediatamente después de que desaparezca el fondo */
+        }
+
+        /* Animación para simular que Silvestre se agranda */
+        @keyframes agrandar {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.5); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        /* Estilo para el botón de volver */
+        .boton-volver {
+            position: absolute;
+            top: 10px; /* Lo coloca cerca de la parte superior */
+            right: 10px; /* Lo alinea a la derecha */
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color del texto */
+            padding: 15px 32px; /* Espaciado del botón */
+            font-size: 16px; /* Tamaño de la fuente */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Puntero al pasar sobre el botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .boton-volver:hover {
+            background-color: #45a049; /* Cambio de color al pasar el mouse */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Imagen de fondo que se muestra durante 5 segundos -->
+    <div class="fondo"></div>
+
+    <!-- Imagen de Piolín que aparece después de que el fondo desaparezca -->
+    <img class="piolin" src="fotos/Piolin5.jpg" alt="Piolín temblando">
+
+    <!-- Imagen de Silvestre que aparece después de que el fondo desaparezca -->
+    <img class="silvestre" src="fotos/Silvestre12.jpg" alt="Silvestre agrandándose">
+
+
+
+     <!-- Botón para volver a la página principal -->
+     <a href="FinalMF0964.html" class="boton-volver">Volver a la Página Principal</a>
+
+
+
+</body>
+</html>
+
+
+
+
